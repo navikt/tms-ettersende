@@ -6,7 +6,7 @@ const basePath = "/tms-ettersendelse-fallback-vitejs";
 const buildPath = path.resolve(__dirname, "../");
 const server = express();
 
-server.use(cors({ origin: "http://localhost:3001" }));
+server.use(cors({ origin: "http://localhost:3000" }));
 
 server.use(
   basePath,
@@ -34,4 +34,4 @@ server.use(/^(?!.*\/(internal|static)\/).*$/, (req, res) =>
     })
 );
 
-server.listen(3001, () => console.log("Server listening on port 3001"));
+server.listen(3000, () => console.log("Server listening on port 3000"));
