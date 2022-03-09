@@ -1,29 +1,29 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: tms-mikrofrontend-template
+  name: tms-ettersendelse-fallback-vitejs
   namespace: min-side
   labels:
     team: min-side
 spec:
   envFrom:
-    - secret: tms-mikrofrontend-template-secrets
-  image: { { version } }
-  port: 7100
+    - secret: tms-ettersendelse-fallback-vitejs-secrets
+  image: {{version}}
+  port: 3000
   liveness:
-    path: /tms-mikrofrontend-template/internal/isAlive
+    path: /tms-ettersendelse-fallback-vitejs/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /tms-mikrofrontend-template/internal/isReady
+    path: /tms-ettersendelse-fallback-vitejs/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /tms-mikrofrontend-template/internal/metrics
+    path: /tms-ettersendelse-fallback-vitejs/internal/metrics
   replicas:
     min: 2
     max: 4
   ingresses:
-    - "https://person.dev.nav.no/tms-mikrofrontend-template"
+    - "https://person.dev.nav.no/tms-ettersendelse-fallback-vitejs"
   resources:
     limits:
       cpu: "3"

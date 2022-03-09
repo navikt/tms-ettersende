@@ -24,18 +24,6 @@ export default ({ command }) => ({
       apply: "build",
     },
   ],
-  build: {
-    cssCodeSplit: false,
-    rollupOptions: {
-      input: "src/Mikrofrontend.jsx",
-      output: {
-        manualChunks: false,
-        entryFileNames: `bundle.js`,
-        chunkFileNames: `bundle.js`,
-        assetFileNames: `bundle.[ext]`,
-      },
-    },
-  },
   test: {
     global: true,
     environment: "jsdom",

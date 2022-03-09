@@ -1,5 +1,5 @@
 {
-  "name": "tms-mikrofrontend-template",
+  "name": "tms-ettersendelse-fallback-vitejs",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@navikt/ds-css": "0.12.5",
     "@navikt/ds-react": "0.14.1",
+    "@navikt/nav-dekoratoren-moduler": "1.6.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "3.34.7"
