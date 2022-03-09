@@ -6,8 +6,6 @@ metadata:
   labels:
     team: min-side
 spec:
-  envFrom:
-    - secret: tms-ettersendelse-fallback-vitejs-secrets
   image: {{version}}
   port: 3000
   liveness:
