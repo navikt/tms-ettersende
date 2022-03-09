@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const getHtmlWithDecorator = require("./dekorator");
-const basePath = "/ettersending";
+const basePath = "/tms-ettersendelse-fallback-vitejs";
 const buildPath = path.resolve(__dirname, "../");
 const server = express();
 
