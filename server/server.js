@@ -3,7 +3,7 @@ const cors = require("cors");
 const path = require("path");
 const getHtmlWithDecorator = require("./dekorator");
 const basePath = "/tms-ettersendelse-fallback-vitejs";
-const buildPath = path.resolve(__dirname, "../");
+const buildPath = path.resolve(__dirname, "../dist");
 const server = express();
 
 server.use(cors({ origin: "http://localhost:3000" }));
