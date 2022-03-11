@@ -31,13 +31,16 @@ export const lenkeliste = [
   {
     tittel: "Kontakt oss",
     url: kontaktOssUrl,
+    tekst: "kontakt.oss-tekst",
   },
   {
     tittel: "Skriv til oss",
     url: skrivTilOssUrl,
+    tekst: "skriv.til.oss-tekst",
   },
   {
     tittel: "Økonomisk sosialhjelp",
     url: sosialHjelpUrl,
+    tekst: "sosialhjelp-tekst",
   },
 ];

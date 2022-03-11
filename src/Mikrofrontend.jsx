@@ -1,13 +1,13 @@
 import React from "react";
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 import App from "./App";
 import "./App.css";
+import Providers from "./providers/Providers";
 
 const Mikrofrontend = () => {
   return (
-    <QueryClientProvider client={new QueryClient()}>
+    <Providers>
       <App />
-    </QueryClientProvider>
+    </Providers>
   );
 };
 
