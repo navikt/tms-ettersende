@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/tms-ettersendelse-fallback-vitejs/",
     "preview": "vite preview",
     "test": "vitest",
     "prepare": "husky install",
