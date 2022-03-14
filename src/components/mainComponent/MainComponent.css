@@ -2,22 +2,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 2.5rem;
 }
 
 .side-tittel {
     margin-top: 3rem !important;
+    padding-left: 2.5rem;
 }
 
 .guide-panel {
-    width: 37.5rem;
-    margin: 2rem;
+    margin: 2rem 0 0.5rem 0;
     color: rgb(62, 56, 50);
- }
+    border: none !important;
+}
+
+.navds-guide-panel__content {
+    width: 37.5rem;
+}
+
+.panel-2 {
+    margin-bottom: 2rem;
+    color: rgb(62, 56, 50);
+}
 
 .steg-liste {
     padding-inline-start: 1rem;
 }
 
 .tekst-1 {
-    padding-bottom: 1rem;
+    padding: 1rem;
+}
+
+.panel-2-tekst-wrapper {
+    padding: 1rem;
 }
