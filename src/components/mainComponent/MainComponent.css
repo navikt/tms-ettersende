@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.side-tittel {
+    margin-top: 3rem !important;
+}
+
 .guide-panel {
     width: 37.5rem;
     margin: 2rem;

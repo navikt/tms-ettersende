@@ -1,5 +1,5 @@
 import React from "react";
-import { BodyShort, GuidePanel, Link } from "@navikt/ds-react";
+import { BodyShort, GuidePanel, Link, Heading } from "@navikt/ds-react";
 import Lenkepanel from "../lenkepanel/Lenkepanel";
 import { dittNavVarslingerUrl, soknaderEttersendelse, soknadOgSkjemaUrl } from "../../urls";
 import { useIntl } from "react-intl";
@@ -9,6 +9,9 @@ const MainComponent = () => {
 
   return (
     <div className="page-wrapper">
+      <Heading spacing size="xlarge" className="side-tittel">
+        Ettersending
+      </Heading>
       <GuidePanel poster className="guide-panel">
         <BodyShort className="tekst-1">
           {translate.formatMessage({ id: "panel.tekst-1-del-1", defaultMessage: "" })}
