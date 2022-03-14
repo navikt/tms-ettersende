@@ -39,9 +39,4 @@ export const lenkeliste = [
     url: skrivTilOssUrl,
     tekst: "skriv.til.oss-tekst",
   },
-  {
-    tittel: "Økonomisk sosialhjelp",
-    url: sosialHjelpUrl,
-    tekst: "sosialhjelp-tekst",
-  },
 ];

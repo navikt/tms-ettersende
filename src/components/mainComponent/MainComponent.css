@@ -5,12 +5,12 @@
 }
 
 .guide-panel {
-    width: 60%;
+    width: 37.5rem;
     margin: 2rem;
     color: rgb(62, 56, 50);
  }
 
-.lenkeliste {
+.steg-liste {
     padding-inline-start: 1rem;
 }
 

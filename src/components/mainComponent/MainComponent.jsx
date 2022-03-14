@@ -1,9 +1,8 @@
 import React from "react";
 import { BodyShort, GuidePanel, Link } from "@navikt/ds-react";
 import Lenkepanel from "../lenkepanel/Lenkepanel";
-import { dittNavVarslingerUrl, soknaderEttersendelse } from "../../urls";
+import { dittNavVarslingerUrl, soknaderEttersendelse, soknadOgSkjemaUrl } from "../../urls";
 import { useIntl } from "react-intl";
-import Tilbakeknapp from "../tilbakeknapp/Tilbakeknapp";
 import "./MainComponent.css";
 const MainComponent = () => {
   const translate = useIntl();
@@ -23,9 +22,27 @@ const MainComponent = () => {
           <Link href={soknaderEttersendelse}>
             {translate.formatMessage({ id: "panel.tekst-2-lenke", defaultMessage: "" })}
           </Link>
-          {translate.formatMessage({ id: "panel.tekst-2-del-2", defaultMessage: "" })}
         </BodyShort>
-        <Tilbakeknapp />
+        <ul className="steg-liste">
+          <li>
+            {translate.formatMessage({ id: "panel.steg-1-tekst", defaultMessage: "Gå til " })}
+            <Link href={soknadOgSkjemaUrl}>
+              {translate.formatMessage({ id: "panel.steg-1-lenke", defaultMessage: "søknad og skjema " })}
+            </Link>
+          </li>
+          <li>
+            {translate.formatMessage({
+              id: "panel.steg-2-tekst",
+              defaultMessage: "Velg søknadskategori, deretter søknaden det gjelder",
+            })}
+          </li>
+          <li>
+            {translate.formatMessage({
+              id: "panel.steg-3-tekst",
+              defaultMessage: "Velg Ettersendelse (det kan være nødvendig å velge Ettersend på papir)",
+            })}
+          </li>
+        </ul>
       </GuidePanel>
       <Lenkepanel />
     </div>

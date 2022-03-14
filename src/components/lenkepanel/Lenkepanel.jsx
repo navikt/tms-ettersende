@@ -9,7 +9,7 @@ const Lenkepanel = () => {
 
   return (
     <Panel className="lenkepanel">
-      <Heading spacing size="medium" className="header">
+      <Heading spacing size="small" className="header">
         Flere muligheter
       </Heading>
       {lenkeliste.map((lenke) => (
