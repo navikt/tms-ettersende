@@ -8,7 +8,7 @@ const getHtmlWithDecorator = (filePath) =>
     level: "Level4",
     redirectToApp: true,
     utloggingsvarsel: true,
-    breadcrumbs: [{ url: `https://person.dev.nav.no/min-side`, title: "Min Side" }],
+    breadcrumbs: [{ url: `https://person.dev.nav.no/min-side`, title: "Ettersending" }],
   });
 
 module.exports = getHtmlWithDecorator;
