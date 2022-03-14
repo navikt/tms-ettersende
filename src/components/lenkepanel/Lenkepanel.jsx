@@ -13,7 +13,7 @@ const Lenkepanel = () => {
         Flere muligheter
       </Heading>
       {lenkeliste.map((lenke) => (
-        <div className="lenke-wrapper">
+        <div className="lenke-wrapper" key={lenke.tittel}>
           <Link className="lenke" href={lenke.url}>
             {lenke.tittel}
           </Link>
