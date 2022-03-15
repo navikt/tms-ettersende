@@ -25,9 +25,6 @@ const MainComponent = () => {
         <div className="panel-2-tekst-wrapper">
           <BodyShort className="tekst-2">
             {translate.formatMessage({ id: "panel.tekst-2-del-1", defaultMessage: "" })}
-            <Link href={soknaderEttersendelse}>
-              {translate.formatMessage({ id: "panel.tekst-2-lenke", defaultMessage: "" })}
-            </Link>
           </BodyShort>
           <ul className="steg-liste">
             <li>

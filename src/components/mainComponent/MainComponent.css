@@ -27,6 +27,7 @@
 
 .steg-liste {
     padding-inline-start: 1rem;
+    list-style-type: decimal;
 }
 
 .tekst-1 {
