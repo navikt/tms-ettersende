@@ -10,22 +10,25 @@ const MainComponent = () => {
   return (
     <div className="page-wrapper">
       <Heading spacing size="xlarge" className="side-tittel">
-        Ettersending
+        {translate.formatMessage({ id: "main.header", defaultMessage: "" })}
       </Heading>
-      <GuidePanel className="guide-panel">
+      <Panel className="panel-1">
+        <Heading size="small" className="heading-1">
+          {translate.formatMessage({ id: "panel.heading-1", defaultMessage: "" })}
+        </Heading>
         <BodyShort className="tekst-1">
           {translate.formatMessage({ id: "panel.tekst-1-del-1", defaultMessage: "" })}
           <Link href={dittNavVarslingerUrl}>
             {translate.formatMessage({ id: "panel.tekst-1-lenke", defaultMessage: "" })}
           </Link>
-          {translate.formatMessage({ id: "panel.tekst-1-del-2", defaultMessage: "" })}
         </BodyShort>
-      </GuidePanel>
-      <GuidePanel className="panel-2">
+      </Panel>
+      <Panel className="panel-2">
         <div className="panel-2-tekst-wrapper">
-          <BodyShort className="tekst-2">
-            {translate.formatMessage({ id: "panel.tekst-2-del-1", defaultMessage: "" })}
-          </BodyShort>
+          <Heading size="xsmall" className="heading-2">
+            {translate.formatMessage({ id: "panel.heading-2", defaultMessage: "" })}
+          </Heading>
+          <BodyShort>{translate.formatMessage({ id: "panel.tekst-2-del-1", defaultMessage: "" })}</BodyShort>
           <ul className="steg-liste">
             <li>
               {translate.formatMessage({ id: "panel.steg-1-tekst", defaultMessage: "Gå til " })}
@@ -47,7 +50,7 @@ const MainComponent = () => {
             </li>
           </ul>
         </div>
-      </GuidePanel>
+      </Panel>
       <Lenkepanel />
     </div>
   );
