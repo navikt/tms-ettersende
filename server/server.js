@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const getHtmlWithDecorator = require("./dekorator");
-const basePath = "/ettersende";
+const basePath = "/person/ettersende";
 const buildPath = path.resolve(__dirname, "../dist");
 const server = express();
 
