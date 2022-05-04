@@ -9,14 +9,14 @@ spec:
   image: {{version}}
   port: 3000
   liveness:
-    path: /tms-ettersendelse-fallback-vitejs/internal/isAlive
+    path: /ettersende/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /tms-ettersendelse-fallback-vitejs/internal/isReady
+    path: /ettersende/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /tms-ettersendelse-fallback-vitejs/internal/metrics
+    path: /ettersende/internal/metrics
   replicas:
     min: 2
     max: 4
