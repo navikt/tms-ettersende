@@ -9,14 +9,14 @@ spec:
   image: {{version}}
   port: 3000
   liveness:
-    path: /ettersende/internal/isAlive
+    path: /person/ettersende/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /ettersende/internal/isReady
+    path: /person/ettersende/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /ettersende/internal/metrics
+    path: /person/ettersende/internal/metrics
   replicas:
     min: 2
     max: 4
