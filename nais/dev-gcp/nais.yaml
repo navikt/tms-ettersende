@@ -23,6 +23,7 @@ spec:
   ingresses:
     - "https://person.dev.nav.no/tms-ettersendelse-fallback-vitejs"
     - "https://www.dev.nav.no/person/ettersende"
+    - "https://www.dev.nav.no/saksoversikt"
   resources:
     limits:
       cpu: "3"
