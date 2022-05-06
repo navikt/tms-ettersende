@@ -25,7 +25,7 @@ const MainComponent = () => {
       </Panel>
       <Panel className="panel-2">
         <div className="panel-2-tekst-wrapper">
-          <Heading size="xsmall" className="heading-2">
+          <Heading size="small" className="heading-2">
             {translate.formatMessage({ id: "panel.heading-2", defaultMessage: "" })}
           </Heading>
           <BodyShort>{translate.formatMessage({ id: "panel.tekst-2-del-1", defaultMessage: "" })}</BodyShort>
