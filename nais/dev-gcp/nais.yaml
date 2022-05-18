@@ -1,7 +1,7 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: tms-ettersendelse-fallback-vitejs
+  name: tms-ettersende
   namespace: min-side
   labels:
     team: min-side
@@ -9,23 +9,24 @@ spec:
   image: {{version}}
   port: 3000
   liveness:
-    path: /tms-ettersendelse-fallback-vitejs/internal/isAlive
+    path: /person/ettersende/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /tms-ettersendelse-fallback-vitejs/internal/isReady
+    path: /person/ettersende/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /tms-ettersendelse-fallback-vitejs/internal/metrics
+    path: /person/ettersende/internal/metrics
   replicas:
     min: 2
     max: 4
   ingresses:
-    - "https://person.dev.nav.no/tms-ettersendelse-fallback-vitejs"
+    - "https://www.dev.nav.no/person/ettersende"
+    - "https://www.dev.nav.no/saksoversikt"
   resources:
     limits:
       cpu: "3"
       memory: 768Mi
     requests:
-      cpu: "500m"
-      memory: 512Mi
+      cpu: "50m"
+      memory: 384Mi

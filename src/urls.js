@@ -23,7 +23,7 @@ export const dittNavUrl = DITT_NAV[getEnvironment()];
 export const soknadOgSkjemaUrl = SOKNAD_OG_SKJEMA[getEnvironment()];
 
 export const dittNavVarslingerUrl = `${dittNavUrl}/varslinger`;
-export const kontaktOssUrl = "https://www.nav.no/person/kontakt-oss";
+export const kontaktOssUrl = `${baseUrl}/person/kontakt-oss`;
 export const skrivTilOssUrl = `${baseUrl}/person/kontakt-oss/skriv-til-oss`;
 export const sosialHjelpUrl = `${baseUrl}/sosialhjelp/innsyn/`;
 export const soknaderEttersendelse = `${baseUrl}/soknader/ettersendelse/person`;

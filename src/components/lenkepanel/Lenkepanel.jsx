@@ -9,7 +9,7 @@ const Lenkepanel = () => {
 
   return (
     <div className="lenkepanel-wrapper">
-      <Panel className="lenkepanel">
+      <Panel className="lenkepanel-1">
         <Heading spacing size="small" className="header">
           Flere muligheter
         </Heading>

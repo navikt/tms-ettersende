@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const getHtmlWithDecorator = require("./dekorator");
-const basePath = "/tms-ettersendelse-fallback-vitejs";
+const basePath = "/person/ettersende";
 const buildPath = path.resolve(__dirname, "../dist");
 const server = express();
 
@@ -23,8 +23,16 @@ server.get(`${basePath}/internal/isReady`, (req, res) => {
   res.sendStatus(200);
 });
 
-// Match everything except internal og static
-server.use(/^(?!.*\/(internal|static)\/).*$/, (req, res) =>
+server.get(`/saksoversikt`, (req, res) => {
+  res.status(301).redirect("/person/ettersende");
+});
+
+server.get(`/saksoversikt/ettersending`, (req, res) => {
+  res.status(301).redirect("/person/ettersende");
+});
+
+// Match everything except internal, static and saksoversikt
+server.use(/^(?!.*\/(internal|static|saksoversikt)\/).*$/, (req, res) =>
   getHtmlWithDecorator(`${buildPath}/index.html`)
     .then((html) => {
       res.send(html);
