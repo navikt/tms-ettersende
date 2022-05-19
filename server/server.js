@@ -31,6 +31,10 @@ server.get(`/saksoversikt/ettersending`, (req, res) => {
   res.status(301).redirect(process.env.TMS_ETTERSENDE_URL);
 });
 
+server.get(`/saksoversikt/app/ettersending`, (req, res) => {
+  res.status(301).redirect(process.env.TMS_ETTERSENDE_URL);
+});
+
 // Match everything except internal, static and saksoversikt
 server.use(/^(?!.*\/(internal|static|saksoversikt)\/).*$/, (req, res) =>
   getHtmlWithDecorator(`${buildPath}/index.html`)
