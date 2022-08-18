@@ -7,7 +7,6 @@ const getHtmlWithDecorator = (filePath) =>
     enforceLogin: false,
     level: "Level4",
     redirectToApp: true,
-    utloggingsvarsel: true,
     breadcrumbs: [{ url: `https://person.dev.nav.no/min-side`, title: "Ettersending" }],
   });
 
