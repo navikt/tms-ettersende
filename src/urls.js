@@ -9,7 +9,7 @@ const BASE_URL = {
 const MIN_SIDE = {
   local: "https://localhost:3000/person/dittnav",
   development: "https://www.dev.nav.no/minside",
-  production: "https://www.nav.no/person/minside",
+  production: "https://www.nav.no/minside",
 };
 
 const SOKNAD_OG_SKJEMA = {
