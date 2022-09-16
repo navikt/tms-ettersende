@@ -6,10 +6,10 @@ const BASE_URL = {
   production: "https://www.nav.no",
 };
 
-const DITT_NAV = {
+const MIN_SIDE = {
   local: "https://localhost:3000/person/dittnav",
-  development: "https://www.dev.nav.no/person/dittnav",
-  production: "https://www.nav.no/person/dittnav",
+  development: "https://www.dev.nav.no/minside",
+  production: "https://www.nav.no/person/minside",
 };
 
 const SOKNAD_OG_SKJEMA = {
@@ -19,10 +19,10 @@ const SOKNAD_OG_SKJEMA = {
 };
 
 export const baseUrl = BASE_URL[getEnvironment()];
-export const dittNavUrl = DITT_NAV[getEnvironment()];
+export const minSideUrl = MIN_SIDE[getEnvironment()];
 export const soknadOgSkjemaUrl = SOKNAD_OG_SKJEMA[getEnvironment()];
 
-export const dittNavVarslingerUrl = `${dittNavUrl}/varslinger`;
+export const dittNavVarslingerUrl = `${minSideUrl}/varslinger`;
 export const kontaktOssUrl = `${baseUrl}/person/kontakt-oss`;
 export const skrivTilOssUrl = `${baseUrl}/person/kontakt-oss/skriv-til-oss`;
 export const sosialHjelpUrl = `${baseUrl}/sosialhjelp/innsyn/`;
