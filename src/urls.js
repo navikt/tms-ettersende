@@ -22,7 +22,7 @@ export const baseUrl = BASE_URL[getEnvironment()];
 export const minSideUrl = MIN_SIDE[getEnvironment()];
 export const soknadOgSkjemaUrl = SOKNAD_OG_SKJEMA[getEnvironment()];
 
-export const dittNavVarslingerUrl = `${minSideUrl}`;
+export const dittNavVarslingerUrl = `${minSideUrl}/varsler`;
 export const kontaktOssUrl = `${baseUrl}/person/kontakt-oss`;
 export const skrivTilOssUrl = `${baseUrl}/person/kontakt-oss/skriv-til-oss`;
 export const sosialHjelpUrl = `${baseUrl}/sosialhjelp/innsyn/`;
