@@ -23,8 +23,8 @@ spec:
     min: 2
     max: 4
   ingresses:
-    - "https://www.dev.nav.no/person/ettersende"
-    - "https://www.dev.nav.no/saksoversikt"
+    - "https://www.intern.dev.nav.no/person/ettersende"
+    - "https://www.intern.dev.nav.no/saksoversikt"
   resources:
     limits:
       cpu: "3"

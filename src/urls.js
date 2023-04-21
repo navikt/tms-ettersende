@@ -2,19 +2,19 @@ import { getEnvironment } from "./environment";
 
 const BASE_URL = {
   local: "https://localhost:3000",
-  development: "https://www.dev.nav.no",
+  development: "https://www.intern.dev.nav.no",
   production: "https://www.nav.no",
 };
 
 const MIN_SIDE = {
   local: "https://localhost:3000/minside",
-  development: "https://www.dev.nav.no/minside",
+  development: "https://www.intern.dev.nav.no/minside",
   production: "https://www.nav.no/minside",
 };
 
 const SOKNAD_OG_SKJEMA = {
   local: "https://localhost:3000/ettersendelse",
-  development: "https://www.dev.nav.no/ettersendelse",
+  development: "https://www.intern.dev.nav.no/ettersendelse",
   production: "https://www.nav.no/ettersendelse",
 };
 
