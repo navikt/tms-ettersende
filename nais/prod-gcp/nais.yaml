@@ -6,22 +6,24 @@ metadata:
   labels:
     team: min-side
 spec:
-  image: {{version}}
+  image: {{image}}
   port: 3000
-  envFrom:
-    - secret: tms-ettersende-secrets
   liveness:
-    path: /person/ettersende/internal/isAlive
+    path: /person/ettersende/api/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /person/ettersende/internal/isReady
+    path: /person/ettersende/api/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /person/ettersende/internal/metrics
+    path: /person/ettersende/api/internal/metrics
   replicas:
     min: 2
     max: 4
+  accessPolicy:
+    outbound:
+      external:
+        - host: "www.nav.no"
   ingresses:
     - "https://www.nav.no/person/ettersende"
     - "https://tjenester.nav.no/saksoversikt"
