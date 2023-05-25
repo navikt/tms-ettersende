@@ -1,14 +1,11 @@
-FROM node:16-alpine
-ENV NODE_ENV production
+FROM node:18-alpine
 
 WORKDIR usr/src/app
-COPY server server/
-COPY dist dist/
+COPY . .
 
-WORKDIR server
-RUN npm install
-
-CMD ["node", "./server.js"]
-
+ENV HOST=0.0.0.0
 ENV PORT=3000
+
+CMD ["node", "./dist/server/entry.mjs"]
+
 EXPOSE $PORT
