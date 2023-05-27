@@ -3,7 +3,7 @@ import { Link } from "@navikt/ds-react/cjs/link/Link.js";
 import { Heading } from "@navikt/ds-react/cjs/typography/Heading.js";
 import { BodyShort } from "@navikt/ds-react/cjs/typography/BodyShort.js";
 import Muligheter from "../muligheter/Muligheter";
-import { varslerUrl, soknadOgSkjemaUrl } from "../../urls";
+import { varslerUrl, skjemaUrl } from "../../urls";
 import "./Ettersending.css";
 
 const Ettersending = () => {
@@ -31,7 +31,7 @@ const Ettersending = () => {
           </BodyShort>
           <ul className="steg-liste">
             <li>
-              Gå til <Link href={soknadOgSkjemaUrl}>søknad og skjema</Link>
+              Gå til <Link href={skjemaUrl}>søknad og skjema</Link>
             </li>
             <li>
               Velg søknadskategori, deretter søknaden det gjelder
