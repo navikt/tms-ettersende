@@ -1,13 +1,37 @@
-const BASE_URL = "https://www.nav.no";
-const MIN_SIDE_URL = "https://www.nav.no/minside";
-const SOKNAD_OG_SKJEMA_URL = "https://www.nav.no/soknader/nb/ettersendelse/person";
+const isDevelopment = process.env.NAIS_CLUSTER_NAME === "dev-gcp";
 
-export const baseUrl = BASE_URL;
-export const minSideUrl = MIN_SIDE_URL;
-export const soknadOgSkjemaUrl = SOKNAD_OG_SKJEMA_URL;
+export const getEnvironment = () => {
+  if (isDevelopment) {
+    return "development";
+  }
 
-export const dittNavVarslingerUrl = `${minSideUrl}/varsler`;
-export const kontaktOssUrl = `${baseUrl}/person/kontakt-oss`;
-export const skrivTilOssUrl = `${baseUrl}/person/kontakt-oss/skriv-til-oss`;
-export const sosialHjelpUrl = `${baseUrl}/sosialhjelp/innsyn/`;
-export const soknaderEttersendelse = `${baseUrl}/soknader/ettersendelse/person`;
+  return "production";
+};
+
+const KONTAKT_OSS_URL = {
+  development: "https://www.intern.dev.no/person/kontakt-oss",
+  production: "https://www.nav.no/person/kontakt-oss"
+};
+
+const SKJEMA_URL = {
+  development: "https://www.intern.dev.no/soknader/nb/ettersendelse/person",
+  production: "https://www.nav.no/soknader/nb/ettersendelse/person"
+};
+
+const SKRIV_TIL_OSS_URL = {
+  development: "https://www.intern.dev.no/person/kontakt-oss/skriv-til-oss",
+  production: "https://www.nav.no/person/kontakt-oss/skriv-til-oss"
+};
+
+const VARSLER_URL = {
+  development: "https://www.intern.dev.nav.no/minside/varsler",
+  production: "https://www.nav.no/minside/varsler",
+};
+
+export const kontaktOssUrl = KONTAKT_OSS_URL[getEnvironment()];
+export const skjemaUrl = SKJEMA_URL[getEnvironment()];
+export const skrivTilOssUrl = SKRIV_TIL_OSS_URL[getEnvironment()];
+export const varslerUrl = VARSLER_URL[getEnvironment()];
+
+// export const sosialHjelpUrl = "https://www.nav.no/sosialhjelp/innsyn/";
+// export const soknaderEttersendelse = "https://www.nav.no/soknader/ettersendelse/person";

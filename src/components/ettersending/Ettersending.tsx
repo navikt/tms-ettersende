@@ -3,7 +3,7 @@ import { Link } from "@navikt/ds-react/cjs/link/Link.js";
 import { Heading } from "@navikt/ds-react/cjs/typography/Heading.js";
 import { BodyShort } from "@navikt/ds-react/cjs/typography/BodyShort.js";
 import Muligheter from "../muligheter/Muligheter";
-import { dittNavVarslingerUrl, soknadOgSkjemaUrl } from "../../urls";
+import { varslerUrl, skjemaUrl } from "../../urls";
 import "./Ettersending.css";
 
 const Ettersending = () => {
@@ -18,7 +18,7 @@ const Ettersending = () => {
         </Heading>
         <BodyShort className="tekst-1">
           Når du sendte inn søknaden kan du ha blitt bedt om ulike vedlegg som dokumentasjon. Hvis noe manglet kan du ha
-          fått en oppgave om å ettersende til søknaden. <Link href={dittNavVarslingerUrl}>Gå til oversikt over oppgavevarsler.</Link>
+          fått en oppgave om å ettersende til søknaden. <Link href={varslerUrl}>Gå til oversikt over oppgavevarsler.</Link>
         </BodyShort>
       </Panel>
       <Panel className="panel-2">
@@ -31,7 +31,7 @@ const Ettersending = () => {
           </BodyShort>
           <ul className="steg-liste">
             <li>
-              Gå til <Link href={soknadOgSkjemaUrl}>søknad og skjema</Link>
+              Gå til <Link href={skjemaUrl}>søknad og skjema</Link>
             </li>
             <li>
               Velg søknadskategori, deretter søknaden det gjelder
