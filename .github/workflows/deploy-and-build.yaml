@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "main"
-      - "astro-ssr"
+      - "refactor"
 
 jobs:
   build:
@@ -61,6 +61,7 @@ jobs:
           CLUSTER: dev-gcp
           RESOURCE: nais/dev-gcp/nais.yaml
           VAR: image=${{ needs.build.outputs.image }},version=${{ github.sha }}
+
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: "ubuntu-latest"
