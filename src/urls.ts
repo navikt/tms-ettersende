@@ -1,11 +1,11 @@
-const isProduction = process.env.NAIS_CLUSTER_NAME === "prod-gcp";
+const isDevelopment = process.env.NAIS_CLUSTER_NAME === "dev-gcp";
 
 export const getEnvironment = () => {
-  if (isProduction) {
-    return "production";
+  if (isDevelopment) {
+    return "development";
   }
 
-  return "development";
+  return "production";
 };
 
 const KONTAKT_OSS_URL = {
