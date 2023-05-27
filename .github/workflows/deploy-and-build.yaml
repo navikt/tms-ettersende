@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "main"
-      - "refactor"
+      - "env"
 
 jobs:
   build:
