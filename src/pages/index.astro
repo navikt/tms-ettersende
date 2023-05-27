@@ -1,7 +1,15 @@
 ---
+import { fetchDecoratorReact } from "@navikt/nav-dekoratoren-moduler/ssr";
 import Decorator from "../components/decorator/Decorator.tsx";
 import Ettersending from "../components/ettersending/Ettersending.tsx";
 import "./index.css";
+
+const decorator = await fetchDecoratorReact({
+  env: "prod",
+  context: "privatperson",
+});
+
+const { Styles, Scripts, Header, Footer } = decorator;
 ---
 
 <!DOCTYPE html>
@@ -10,15 +18,18 @@ import "./index.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Ettersending</title>
+    <link rel="preload" href="https://cdn.nav.no/aksel/@navikt/ds-css/3.1.3/index.min.css" as="style" />
     <link rel="stylesheet" href="https://cdn.nav.no/aksel/@navikt/ds-css/3.1.3/index.min.css" />
   </head>
+  <Styles />
   <body>
-    <Decorator>
+    <Header />
       <main>
         <div class="app">
           <Ettersending />
         </div>
       </main>
-    </Decorator>
+     <Footer />
+     <Scripts />
   </body>
 </html>
