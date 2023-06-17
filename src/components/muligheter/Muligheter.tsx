@@ -1,8 +1,5 @@
-import { Panel } from "@navikt/ds-react/cjs/panel/Panel.js";
-import { Heading } from "@navikt/ds-react/cjs/typography/Heading.js";
-import { BodyShort } from "@navikt/ds-react/cjs/typography/BodyShort.js";
-import { Link } from "@navikt/ds-react/cjs/link/Link.js";
 import { kontaktOssUrl, skrivTilOssUrl } from "../../urls";
+import { BodyShort, Heading, Link, Panel } from "@navikt/ds-react";
 import "./Muligheter.css";
 
 const Muligheter = () => {
