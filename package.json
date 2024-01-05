@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "base": "deno run --allow-read --allow-write ./base.ts",
     "preview": "node ./dist/server/entry.mjs",
     "astro": "astro",
     "prettier": "prettier --write ."
