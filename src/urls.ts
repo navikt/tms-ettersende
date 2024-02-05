@@ -9,12 +9,12 @@ export const getEnvironment = () => {
 };
 
 const KONTAKT_OSS_URL = {
-  development: "https://www.intern.dev.no/person/kontakt-oss",
+  development: "https://www.dev.no/person/kontakt-oss",
   production: "https://www.nav.no/person/kontakt-oss"
 };
 
 const SKJEMA_URL = {
-  development: "https://www.intern.dev.no/soknader/nb/ettersendelse/person",
+  development: "https://www.dev.no/soknader/nb/ettersendelse/person",
   production: "https://www.nav.no/soknader/nb/ettersendelse/person"
 };
 
