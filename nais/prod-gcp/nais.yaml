@@ -29,7 +29,6 @@ spec:
     - "https://tjenester.nav.no/saksoversikt"
   resources:
     limits:
-      cpu: "3"
       memory: 768Mi
     requests:
       cpu: "50m"
