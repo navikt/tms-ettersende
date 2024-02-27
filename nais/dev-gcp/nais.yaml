@@ -22,8 +22,9 @@ spec:
     max: 4
   accessPolicy:
     outbound:
-      external:
-        - host: "www.nav.no"
+      rules:
+        - application: decorator-next
+          namespace: personbruker
   ingresses:
     - "https://www.intern.dev.nav.no/person/ettersende"
   resources:

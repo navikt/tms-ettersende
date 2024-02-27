@@ -1,31 +1,23 @@
-const isDevelopment = process.env.NAIS_CLUSTER_NAME === "dev-gcp";
-
-export const getEnvironment = () => {
-  if (isDevelopment) {
-    return "development";
-  }
-
-  return "production";
-};
+import { getEnvironment } from "./environment.ts";
 
 const KONTAKT_OSS_URL = {
-  development: "https://www.ekstern.dev.nav.no/kontaktoss",
-  production: "https://www.nav.no/person/kontakt-oss"
+  dev: "https://www.ekstern.dev.nav.no/kontaktoss",
+  prod: "https://www.nav.no/person/kontakt-oss"
 };
 
 const SKJEMA_URL = {
-  development: "https://www.ekstern.dev.nav.no/ettersende",
-  production: "https://www.nav.no/soknader/nb/ettersendelse/person"
+  dev: "https://www.ekstern.dev.nav.no/ettersende",
+  prod: "https://www.nav.no/soknader/nb/ettersendelse/person"
 };
 
 const SKRIV_TIL_OSS_URL = {
-  development: "https://www.intern.dev.no/person/kontakt-oss/skriv-til-oss",
-  production: "https://www.nav.no/person/kontakt-oss/skriv-til-oss"
+  dev: "https://www.intern.dev.no/person/kontakt-oss/skriv-til-oss",
+  prod: "https://www.nav.no/person/kontakt-oss/skriv-til-oss"
 };
 
 const VARSLER_URL = {
-  development: "https://www.intern.dev.nav.no/minside/varsler",
-  production: "https://www.nav.no/minside/varsler",
+  dev: "https://www.intern.dev.nav.no/minside/varsler",
+  prod: "https://www.nav.no/minside/varsler",
 };
 
 export const kontaktOssUrl = KONTAKT_OSS_URL[getEnvironment()];

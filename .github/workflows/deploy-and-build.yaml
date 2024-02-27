@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "main"
-      - "oppdater-astro"
+      - "decorator-next"
 
 jobs:
   build:
