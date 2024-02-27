@@ -1,5 +1,5 @@
 ---
-import { fetchDecoratorHtml } from "@navikt/nav-dekoratoren-moduler/ssr";
+import { fetchDecoratorReact } from "@navikt/nav-dekoratoren-moduler/ssr";
 import Ettersending from "../components/ettersending/Ettersending";
 import { getEnvironment } from "../environment";
 import "./index.css";
@@ -7,7 +7,7 @@ import "./index.css";
 const env = getEnvironment();
 const decoratorEnv = env === "dev" ? "devNext" : env;
 
-const Fragments = await fetchDecoratorHtml({
+const Decorator = await fetchDecoratorReact({
   env: decoratorEnv as const,
   params: {
     context: "privatperson",
@@ -23,16 +23,16 @@ const Fragments = await fetchDecoratorHtml({
     <title>Ettersending</title>
     <link rel="preload" href="https://cdn.nav.no/aksel/@navikt/ds-css/6.1.0/index.min.css" as="style" />
     <link rel="stylesheet" href="https://cdn.nav.no/aksel/@navikt/ds-css/6.1.0/index.min.css" />
-    <Fragment set:html={Fragments.DECORATOR_STYLES} />
+    <Decorator.Styles />
   </head>
   <body>
-    <Fragment set:html={Fragments.DECORATOR_HEADER} />
+    <Decorator.Header />
     <main>
       <div class="app">
         <Ettersending />
       </div>
     </main>
-    <Fragment set:html={Fragments.DECORATOR_FOOTER} />
-    <Fragment set:html={Fragments.DECORATOR_SCRIPTS} />
+    <Decorator.Footer />
+    <Decorator.Scripts />
   </body>
 </html>
