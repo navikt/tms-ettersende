@@ -1,7 +1,7 @@
-import { Panel } from "@navikt/ds-react/cjs/panel/Panel.js";
-import { Link } from "@navikt/ds-react/cjs/link/Link.js";
-import { Heading } from "@navikt/ds-react/cjs/typography/Heading.js";
-import { BodyShort } from "@navikt/ds-react/cjs/typography/BodyShort.js";
+import { Panel } from "@navikt/ds-react";
+import { Link } from "@navikt/ds-react";
+import { Heading } from "@navikt/ds-react";
+import { BodyShort } from "@navikt/ds-react";
 import Muligheter from "../muligheter/Muligheter";
 import { varslerUrl, skjemaUrl } from "../../urls";
 import "./Ettersending.css";
