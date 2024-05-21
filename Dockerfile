@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM gcr.io/distroless/nodejs20
 
 WORKDIR usr/src/app
 COPY . .
